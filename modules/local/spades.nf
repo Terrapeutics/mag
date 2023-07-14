@@ -28,6 +28,7 @@ process SPADES {
             --memory $maxmem \
             --pe1-1 ${reads[0]} \
             --pe1-2 ${reads[1]} \
+            --phred-offset 33 \
             -o spades
         mv spades/assembly_graph_with_scaffolds.gfa SPAdes-${meta.id}_graph.gfa
         mv spades/scaffolds.fasta SPAdes-${meta.id}_scaffolds.fasta

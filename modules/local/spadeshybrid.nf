@@ -28,6 +28,7 @@ process SPADESHYBRID {
             --memory $maxmem \
             --pe1-1 ${short_reads[0]} \
             --pe1-2 ${short_reads[1]} \
+            --phred-offset 33 \
             --nanopore ${long_reads} \
             -o spades
         mv spades/assembly_graph_with_scaffolds.gfa SPAdesHybrid-${meta.id}_graph.gfa
